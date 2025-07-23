@@ -23,3 +23,35 @@
    ```bash
    git clone https://github.com/yourusername/ipinfo_lookup.git
    cd ipinfo_lookup
+
+---
+
+##Usage
+Single IP Lookup:
+python3 ipinfo_lookup.py -i 8.8.8.8 -v
+
+Bulk Lookup from File:
+python3 ipinfo_lookup.py -f ips.txt -o results.json --format json
+
+Save Output as CSV:
+python3 ipinfo_lookup.py -f ips.txt -o results.csv --format csv -q
+
+Configuration:
+You can provide your ipinfo.io API token in two ways:
+
+Environment variable:
+export IPINFO_TOKEN="your_token_here"
+
+Config file ~/.ipinfo.cfg:
+[DEFAULT]
+token = your_token_here]
+
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Author
+Eyal Zabarsky © 2025
+
+References
+ipinfo.io API
